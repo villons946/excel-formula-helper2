@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnRibbonLoad">
+  <ribbon>
+    <tabs>
+      <tab id="tabFormulaHelper" label="公式助手" insertAfterMso="TabHome">
+        <group id="grpLookup" label="查找与引用">
+          <button id="btnVlookup" label="VLOOKUP 向导" supertip="分步选择查找值与查找区域，自动生成 VLOOKUP 公式，可一键套 IFERROR。" onAction="OnRibbonVlookup"/>
+          <button id="btnXlookup" label="XLOOKUP 向导" supertip="新一代查找函数（需 Microsoft 365 / Excel 2021 及以上，自动检测）。" onAction="OnRibbonXlookup"/>
+          <button id="btnIndexMatch" label="INDEX+MATCH" supertip="生成 INDEX(返回列,MATCH(查找值,查找区域,0)) 组合公式。" onAction="OnRibbonIndexMatch"/>
+        </group>
+        <group id="grpCount" label="条件统计">
+          <button id="btnCountif" label="COUNTIF" supertip="条件计数。条件自动处理引号，如 >=60、完成、张*。" onAction="OnRibbonGeneric"/>
+          <button id="btnCountifs" label="COUNTIFS" supertip="多条件计数。" onAction="OnRibbonGeneric"/>
+          <button id="btnSumif" label="SUMIF" supertip="条件求和。" onAction="OnRibbonGeneric"/>
+          <button id="btnSumifs" label="SUMIFS" supertip="多条件求和。" onAction="OnRibbonGeneric"/>
+          <button id="btnAverageif" label="AVERAGEIF" supertip="条件求平均。" onAction="OnRibbonGeneric"/>
+          <button id="btnMaxifs" label="MAXIFS" supertip="条件求最大值（需 Excel 2019+，自动检测）。" onAction="OnRibbonGeneric"/>
+          <button id="btnMinifs" label="MINIFS" supertip="条件求最小值（需 Excel 2019+，自动检测）。" onAction="OnRibbonGeneric"/>
+        </group>
+        <group id="grpWrap" label="一键包裹">
+          <button id="btnWrapIfError" label="IFERROR 容错" supertip="先选中含公式的单元格，再点击：公式被包裹为 =IFERROR(原公式, 容错值)。" onAction="OnRibbonWrapIfError"/>
+          <button id="btnWrapRound" label="ROUND 保留小数" supertip="先选中含公式的单元格，再点击：公式被包裹为 =ROUND(原公式, 小数位数)。" onAction="OnRibbonWrapRound"/>
+          <button id="btnWrapText" label="TEXT 格式化" supertip="先选中含公式的单元格，再点击：公式被包裹为 =TEXT(原公式, 格式)。" onAction="OnRibbonWrapText"/>
+        </group>
+        <group id="grpMerge" label="合并单元格">
+          <button id="btnMergeA" label="合并A列" supertip="把 A 列中连续且值相同的单元格合并成一格（第 1 行视为表头）。执行前确认，合并后可用【撤销合并】还原。" onAction="OnRibbonMerge"/>
+          <button id="btnMergeB" label="合并B列" supertip="把 B 列中连续且值相同的单元格合并成一格（第 1 行视为表头）。执行前确认，合并后可用【撤销合并】还原。" onAction="OnRibbonMerge"/>
+          <button id="btnMergeC" label="合并C列" supertip="把 C 列中连续且值相同的单元格合并成一格（第 1 行视为表头）。执行前确认，合并后可用【撤销合并】还原。" onAction="OnRibbonMerge"/>
+          <button id="btnMergeD" label="合并D列" supertip="把 D 列中连续且值相同的单元格合并成一格（第 1 行视为表头）。执行前确认，合并后可用【撤销合并】还原。" onAction="OnRibbonMerge"/>
+          <button id="btnMergeWizard" label="合并列…" supertip="自己填或框选要合并的列（支持 A ｜ A,C ｜ A:C ｜ 1,3），执行前会先显示将合并多少处。第 1 行默认视为表头不参与合并，可勾选忽略大小写与首尾空格。" onAction="OnRibbonMergeWizard"/>
+          <button id="btnMergeUndo" label="撤销合并" supertip="撤销最近一次合并，还原值与合并状态（可撤销最近 3 次）。" onAction="OnRibbonMergeUndo"/>
+        </group>
+        <group id="grpHelp" label="帮助">
+          <button id="btnHelp" label="使用说明" supertip="查看公式助手的使用说明。" onAction="OnRibbonHelp"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

@@ -1,0 +1,12 @@
+# 加载宏为二进制，不要做行尾/文本转换
+*.xlam binary
+*.bin binary
+*.png binary
+
+# VBA 源码与脚本：入库统一 LF，检出保持原样
+*.bas text eol=lf
+*.vba text eol=lf
+*.cls text eol=lf
+*.xml text eol=lf
+*.md  text eol=lf
+*.ps1 text

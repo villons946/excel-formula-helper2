@@ -1,0 +1,15 @@
+# Python 缓存与本地临时产物
+__pycache__/
+build/_work*/
+
+# 注册表备份等本地文件
+build/*.reg
+
+# 构建产物不入库：通过 GitHub Releases 分发（构建命令见 README）
+dist/*.xlam
+
+# Windows / Office 临时文件
+~$*
+*.tmp
+Thumbs.db
+desktop.ini
